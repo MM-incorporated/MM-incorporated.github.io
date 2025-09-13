@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход — Магазин Nike</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="auth">
+  <div class="auth-bg"></div>
+  <main class="auth-wrapper">
+    <form class="auth-card" action="https://httpbin.org/post" method="POST">
+      <h1>Вход</h1>
+
+      <label>
+        Логин
+        <input type="text" name="login" required autocomplete="username" placeholder="Ваш логин">
+      </label>
+
+      <label>
+        Пароль
+        <input type="password" name="password" required autocomplete="current-password" placeholder="Пароль">
+      </label>
+
+      <label class="remember">
+        <input type="checkbox" name="remember"> Запомнить меня
+      </label>
+
+      <button type="submit">Войти</button>
+
+      <p class="back-link"><a href="https://johan0565.github.io/">← На главную</a></p>
+    </form>
+  </main>
+</body>
+</html>
