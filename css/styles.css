@@ -1,187 +1,128 @@
-
 body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
+    font-family: Arial, sans-serif;
+    margin: 0100;
     padding: 0;
-    background-color: beige;
-    background-image: url("../images/1.png");
+    background: url('../images/background.jpg');
+    background-size: cover;
     color: #333;
-
-    padding-bottom: 70px;
 }
+
 
 header {
-    background-color: #000;
-    color: white;
-    padding: 15px;
+    background: rgba(0, 0, 0, 0.6);
+    background-image: url("../images/445.png");
+    color: #fff;
+    padding: 10px 0;
     text-align: center;
+    position: relative;
+}
+nav a { color: #fff; }
+
+header .logo {
+    position: absolute;
+    top: 0px;
+    left: 20px;
+    height: 150px;  /* Высота логотипа */
 }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
+header .logo img {
+    height: 100%;
 }
+
 nav a {
     color: white;
+    margin: 0 15px;
     text-decoration: none;
-    font-weight: bold;
 }
 
 main {
-    max-width: 1000px;
-    margin: 20px auto;
-    padding: 15px;
-    background-color: white;
+    padding: 20px;
+    padding-left: 150px;  /* Отступ слева */
+    padding-right: 300px; /* Отступ справа */
+    background-image: url('../images/background-night.png'); /* Картинка фона для основного контента */
+    background-size: 80% auto; /* Уменьшаем картинку по бокам, оставляем ее пропорциональной */
+    background-position: center center; /* Центрирование картинки */
+    background-attachment: fixed; /* Закрепление картинки */
 }
-
-section {
-    margin-bottom: 30px;
-    text-align: center;
-}
-
-h2 {
-    color: #000;
-    margin-top: 0;
-}
-
-.logo {
-    width: 200px;
-}
-
-.catalog {
-    display: flex;
-    justify-content: space-around;
-    gap: 16px;
-    flex-wrap: wrap;
-}
-.catalog-item {
-    text-align: center;
-}
-.catalog-item img {
-    width: 100px;
-    height: 100px;
-}
-
-.popular {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-}
-.popular img {
-    width: 200px;
-    height: 150px;
-    object-fit: cover;
-}
-
-#history {
-    background-color: #333;
-    color: #fff;
-    padding: 16px;
-    border-radius: 8px;
-}
-
-#history h2 {
-  color: #ffffff; 
-}
-
-.table-container{
-    overflow-x: auto;
-    padding: 0 12px;
-}
-.team-table{
-    margin: 25px auto;
-    width: fit-content;
-    max-width: 100%;
-    border-collapse: collapse;
-    font-size: 0.9em;
-    border: 2px solid #000;
-}
-
-/*ОФОРМЛЕНИЕ ТАБЛИЧКИ*/
-.team-table th,
-.team-table td {
-    border: 1px solid #000;
-    padding: 8px 12px;
-    text-align: center;
-}
-
-
-input, select, textarea, button { font: inherit; }
-.form-card{
-  max-width: 800px;
-  margin: 20px auto;
-  background: #fff;
-  border: 1px solid #e4e4e4;
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 6px 18px rgba(0,0,0,.06);
-}
-.form-card label{ display: grid; gap: 6px; text-align: left; }
-.form-card input[type="text"],
-.form-card input[type="email"],
-.form-card input[type="file"],
-.form-card select,
-.fieldset{
-  display: flex; flex-wrap: wrap; gap: 10px 18px;
-  padding: 10px 12px; border: 1px dashed #cfcfcf; border-radius: 8px;
-}
-.form-card .consent{ display: flex; align-items: center; gap: 8px; }
-.form-card button{
-  grid-column: 1 / -1;
-  padding: 12px 16px;
-  background: #000; color: #fff; border: 0; border-radius: 10px;
-  cursor: pointer; font-weight: 700;
-}
-
-
-
-
-body.auth{ min-height: 100vh; position: relative; overflow: hidden; }
-.auth-bg{
-  position: fixed; inset: 0;
-  background:
-    color( rgb(255, 255, 255) rgb(255, 255, 255) rgb(216, 219, 174));
-  z-index: -1;
-}
-.auth-wrapper{
-  min-height: 100vh;
-  display: flex; align-items: center; justify-content: center;
-  padding: 24px;
-}
-.auth-card{
-  width: 100%; max-width: 420px;
-  background: #fff;
-  border-radius: 16px; padding: 28px 22px;
-  box-shadow: 0 20px 60px rgba(0,0,0,.25);
-  display: grid; gap: 14px;
-}
-.auth-card h1{ margin: 0 0 6px; text-align: center; }
-.auth-card label{ display: grid; gap: 6px; }
-.auth-card input[type="text"],
-.auth-card input[type="password"]{
-  padding: 12px 14px;
-  border: 1px solid #cfcfcf; border-radius: 10px; background: #fafafa;
-}
-.auth-card .remember{ display: flex; align-items: center; gap: 8px; }
-.auth-card button{
-  padding: 12px 16px; background: #000; color: #fff;
-  border: 0; border-radius: 10px; cursor: pointer; font-weight: 700;
-}
-.auth-card button:hover{ opacity: .9; }
-.auth-card a{ color: #000; }
 
 footer {
-    background-color: #000;
+    background: rgb(60, 60, 60);  /* Полностью непрозрачный черный фон для подвала */
     color: white;
     text-align: center;
     padding: 10px;
-    position: fixed;
-    bottom: 0;
     width: 100%;
+    bottom: 0;
+}
+
+section img, article img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+
+.wide-text {
+    font-size: 1.5em;  /* Увеличиваем размер шрифта */
+    line-height: 1.6;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-align: justify;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+section a {
+    color: #333; /* Темно-серый цвет */
+    font-size: 1.2em; /* Размер шрифта */
+    text-decoration: none; /* Убираем подчеркивание */
+}
+
+section a:hover {
+    text-decoration: underline; /* Подчеркивание при наведении */
+}
+
+h2 {
+    font-size: 2em;  /* Увеличиваем размер шрифта для заголовка */
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 1.2em; /* Увеличиваем шрифт для параграфов */
+    line-height: 1.6; /* Устанавливаем высоту строки */
+}
+
+li {
+    font-size: 1.2em; /* Увеличиваем шрифт для элементов списка */
+    line-height: 1.6; /* Устанавливаем высоту строки */
+}
+.team-list li {
+    font-size: 1.5em; /* Увеличиваем размер шрифта для списка участников */
+    line-height: 1.6; /* Устанавливаем высоту строки */
+}
+.fio-label {
+    font-size: 1.4em; /* Увеличиваем размер шрифта для ФИО: */
+    font-weight: bold; /* Жирный шрифт для ФИО: */
+}
+
+.full-name {
+    font-size: 1.4em; /* Увеличиваем размер шрифта для полного имени */
+    font-weight: normal; /* Убираем жирность для полного имени */
+}
+
+.video-section video {
+    max-width: 60%;  /* Устанавливаем максимальную ширину для видео */
+    height: auto;    /* Высота будет автоматически подстраиваться */
+}
+
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px; /* Расстояние между изображениями */
+}
+
+.image-gallery img {
+    width: 48%; /* Каждое изображение будет занимать 48% ширины родительского контейнера */
+    height: auto;
+    opacity: 0.75;
+    object-fit: cover; /* Обеспечивает сохранение пропорций изображений */
 }
